@@ -1,0 +1,11 @@
+# Cache files
+cache/
+*.json
+
+# Large data files
+data/raw/*.tiff
+data/processed/*.gpkg
+
+# Python cache
+__pycache__/
+*.pyc
