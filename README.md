@@ -360,7 +360,7 @@ earthengine-api ≥0.1.370
 
 **Sneha Trivedi**
 Student Project — Air Quality Remote Sensing & Machine Learning
-Google Earth Engine Project: `ee-snehatrivedi019`
+Google Earth Engine Project: `teak-catwalk-473711-r3`
 
 ---
 
