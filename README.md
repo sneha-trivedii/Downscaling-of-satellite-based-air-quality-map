@@ -276,7 +276,7 @@ This finding motivated a **stratified seasonal train/val/test split** to ensure 
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Clone the Repository
 
