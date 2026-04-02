@@ -21,7 +21,7 @@
 
 ---
 
-## 🌍 Project Overview
+## Project Overview
 
 Satellites like **Sentinel-5P TROPOMI** monitor air pollution from space, but their data is coarse — each pixel covers approximately 3.5km × 3.5km. This makes it impossible to understand air quality at the neighborhood level.
 
@@ -41,7 +41,7 @@ Before (Satellite gives us):          After (Our model produces):
 
 ---
 
-## ❓ Problem Statement
+## Problem Statement
 
 Individual tools exist for satellite data processing, ML, and geospatial visualization — but there is no comprehensive, end-to-end solution that ties all of these together specifically for air quality downscaling. This project fills that gap by building a complete, transferable ML framework demonstrated over Delhi as a case study.
 
@@ -49,7 +49,7 @@ The methodology is **transferable** — the same pipeline can be applied to any 
 
 ---
 
-## 🔬 Research Question
+## Research Question
 
 > *Can machine learning improve the spatial resolution of TROPOMI NO₂ satellite observations over urban areas, and which model architecture best captures the spatial patterns of urban air pollution?*
 
@@ -63,7 +63,7 @@ The methodology is **transferable** — the same pipeline can be applied to any 
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 Five datasets were collected and integrated:
 
@@ -84,7 +84,7 @@ Five datasets were collected and integrated:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Downscaling-of-satellite-based-air-quality-map/
@@ -125,7 +125,7 @@ Downscaling-of-satellite-based-air-quality-map/
 
 ---
 
-## 🔄 Pipeline Overview
+## Pipeline Overview
 
 ```
 Phase 1: Data Collection
@@ -161,7 +161,7 @@ Generate full Delhi NO₂ map
 
 ---
 
-## 🤖 Models Built
+## Models Built
 
 ### 1. Linear Regression (Baseline)
 The simplest possible model — draws a straight line through the relationship between features and NO₂. Used as the benchmark every subsequent model must beat.
@@ -196,12 +196,12 @@ Input (16×16×4) → Encoder → Bottleneck → Decoder → Output (16×16×1)
                     ↕ skip connections ↕
 Filters: 16 → 32 → 64 → 32 → 16
 Total parameters: ~60,000
-Best epoch: 46
+Best epoch: 39
 ```
 
 ---
 
-## 📊 Results
+## Results
 
 ### Model Comparison (Validation Set)
 
@@ -211,15 +211,15 @@ Best epoch: 46
 | XGBoost v1 | 0.9028 | 0.0833 | 0.0550 | +40% vs baseline |
 | XGBoost v2 + roads | 0.9196 | 0.0757 | 0.0503 | Best tabular |
 | U-Net v1 | 0.8982 | 0.0765 | 0.0578 | Spatial model |
-| U-Net v2 | 0.9053 | 0.0747 | 0.0569 | Improved spatial |
+| U-Net v2 | 0.9013 | 0.0763 | 0.0576 | Improved spatial |
 
 ### Final Test Result (Unseen Data)
 
 | Model | Val R² | Test R² | Verdict |
 |---|---|---|---|
-| **U-Net v2** | **0.9053** | **0.9284** | **Best overall** 🏆 |
+| **U-Net v2** | **0.9013** | **0.9342** | **Best overall** 🏆 |
 
-> The U-Net v2 achieved **R² = 0.9284 on completely unseen test data** — meaning the model explains 92.84% of NO₂ variation across Delhi. The test score being higher than validation is attributed to the test months (August, December) having stronger seasonal pollution signals than validation months (May, November).
+> The U-Net v2 achieved **R² = 0.9342 on completely unseen test data** — meaning the model explains 93.42% of NO₂ variation across Delhi. The test score being higher than validation is attributed to the test months (August, December) having stronger seasonal pollution signals than validation months (May, November).
 
 ### Feature Importance (XGBoost v2)
 
@@ -250,7 +250,7 @@ This finding motivated a **stratified seasonal train/val/test split** to ensure 
 
 ---
 
-## 💡 Key Learnings
+## Key Learnings
 
 **Data Science:**
 - Always visualize data before modelling — raw satellite data looks black in image viewers because of tiny decimal values
@@ -317,7 +317,7 @@ ee.Initialize(project='your-gee-project-id')
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 ```
 Python        3.10
@@ -336,7 +336,7 @@ earthengine-api ≥0.1.370
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
 **Model Improvements:**
 - CNN+LSTM hybrid for temporal prediction (predicting future monthly NO₂)
@@ -356,7 +356,7 @@ earthengine-api ≥0.1.370
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Sneha Trivedi**
 Student Project — Air Quality Remote Sensing & Machine Learning
@@ -364,7 +364,7 @@ Google Earth Engine Project: `teak-catwalk-473711-r3`
 
 ---
 
-## 📄 License
+## License
 
 This project is for academic and research purposes. Data sources retain their original licenses:
 - TROPOMI NO₂: Copernicus/ESA (open access)
