@@ -1,6 +1,6 @@
 # 🛰️ Downscaling of Satellite-Based Air Quality Maps Using Machine Learning
 
-> A complete end-to-end ML pipeline that transforms coarse-resolution TROPOMI satellite NO₂ data into high-resolution air quality maps over Delhi, India — achieving **R² = 0.9284** on unseen test data.
+> A complete end-to-end ML pipeline that transforms coarse-resolution TROPOMI satellite NO₂ data into high-resolution air quality maps over Delhi, India — achieving **R² = 0.9342** on unseen test data.
 
 ---
 
