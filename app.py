@@ -55,7 +55,6 @@ page = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Repository**")
 st.sidebar.markdown(f"[GitHub ↗]({REPO_URL})")
-st.sidebar.markdown("**Author:** Sneha Trivedi")
 st.sidebar.markdown("**Geographic Scope:** Delhi, India")
 st.sidebar.caption("28.4°N–28.9°N, 76.8°E–77.4°E")
 
@@ -309,5 +308,3 @@ else:
         `GeoPandas` · `OSMnx` · `Google Earth Engine` · `Streamlit`
         """
     )
-
-    st.caption("Built as part of Vocational Training coursework — for academic use.")
