@@ -1,11 +1,3 @@
-"""
-Streamlit Dashboard — Downscaling of Satellite-Based Air Quality Maps
-Vocational Training Project | Sneha Trivedi
-
-Run locally with:
-    streamlit run app.py
-"""
-
 import streamlit as st
 
 # ----------------------------------------------------------------------------
