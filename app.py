@@ -63,7 +63,6 @@ st.sidebar.caption("28.4°N–28.9°N, 76.8°E–77.4°E")
 # ----------------------------------------------------------------------------
 if page == "🏠 Overview":
     st.title("Downscaling of Satellite-Based Air Quality Maps")
-    st.caption("Vocational Training Project — Machine Learning & Geospatial Analysis")
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Final Test R²", "0.9342", "U-Net v2")
