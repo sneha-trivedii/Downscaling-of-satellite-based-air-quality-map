@@ -22,7 +22,7 @@
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 Explore the interactive dashboard here: **[Live App →](https://downscaling-of-satellite-based-air-quality-map-fspkcqx4rjktp45.streamlit.app/)**
 
